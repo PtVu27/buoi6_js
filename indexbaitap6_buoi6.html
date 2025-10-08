@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quản lý danh sách sinh viên</title>
+</head>
+<body>
+  <h1>Quản lý danh sách sinh viên</h1>
+  <p id="result"></p>
+
+  <script>
+    let students = [
+      {name: "An", score: 8},
+      {name: "Bình", score: 7}
+    ];
+
+    students.push(
+      {name: "Cường", score: 9},
+      {name: "Duy", score: 6},
+      {name: "Hà", score: 10},
+      {name: "Lan", score: 8.5},
+      {name: "Nam", score: 7.5}
+    );
+
+    let removedStudent = students.pop();
+
+    students.sort((a, b) => b.score - a.score);
+
+    let resultText = "Danh sách sinh viên sau khi thêm và xóa sinh viên cuối (theo điểm giảm dần): <br>";
+    resultText += JSON.stringify(students, null, 2);
+
+    resultText += `<br>Sinh viên bị xóa: ${removedStudent.name} - ${removedStudent.score} điểm`;
+    
+    document.getElementById("result").innerHTML = resultText;
+  </script>
+</body>
+</html>
