@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Biến đổi mảng với map</title>
+</head>
+<body>
+  <h1>Kết quả sẽ hiển thị trong Console</h1>
+
+  <script>
+    let prices = [100000, 200000, 150000];
+
+    let Prices = prices.map(function(price) {
+      return price * 1.2;
+    });
+
+    console.log("Mảng mới =", Prices);
+  </script>
+</body>
+</html>

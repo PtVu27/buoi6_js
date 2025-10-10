@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Kiểm tra với some và every</title>
+</head>
+<body>
+  <h1>Kết quả sẽ hiển thị trong Console</h1>
+
+  <script>
+    let stocks = [true, false, true];
+
+    let Stock = stocks.some(function(status) {
+      return status === false;
+    });
+
+    let allinStock = stocks.every(function(status) {
+      return status === true;
+    });
+
+    console.log("some =", Stock);
+    console.log("every =", allinStock);
+  </script>
+</body>
+</html>

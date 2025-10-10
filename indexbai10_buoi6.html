@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Tìm kiếm với find và findIndex</title>
+</head>
+<body>
+  <h1>Kết quả sẽ hiển thị trong Console</h1>
+
+  <script>
+    let users = [
+      { name: "An", age: 25 },
+      { name: "Bình", age: 30 },
+      { name: "Cường", age: 28 }
+    ];
+
+    let foundUser = users.find(function(user) {
+      return user.name === "Bình";
+    });
+
+    let Age = users.findIndex(function(user) {
+      return user.age === 28;
+    });
+
+    console.log("Đối tượng =", foundUser);
+    console.log("Chỉ số =", Age);
+  </script>
+</body>
+</html>

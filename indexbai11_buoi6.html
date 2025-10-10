@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Tính tổng với reduce</title>
+</head>
+<body>
+  <h1>Kết quả sẽ hiển thị trong Console</h1>
+
+  <script>
+    let expenses = [50000, 120000, 80000];
+
+    let total = expenses.reduce(function(accumulator, Value) {
+      return accumulator + Value;
+    }, 0);
+
+    console.log("Tổng =", total);
+  </script>
+</body>
+</html>
